@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:background="#F0FFF0"
+	android:layout_height="match_parent">
+	<ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id = "@+id/btnN"
+		android:background="#00000000" 
+		android:layout_alignParentBottom = "true"
+        android:src="@mipmap/back"/>
+	<ImageButton
+        android:layout_width="120px"
+        android:layout_height="120px"
+        android:id = "@+id/btnY"
+		android:background="#00000000" 
+		android:layout_alignParentBottom = "true"
+		android:layout_alignParentRight = "true"
+        android:src="@mipmap/add"/>
+	<Button
+		android:text=""
+		android:layout_width="120px"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent = "true"
+		android:id="@+id/btnDate" />
+	<Button
+		android:text=""
+		android:layout_width="120px"
+		android:layout_height="wrap_content"
+		android:layout_toLeftOf = "@id/btnDate"
+		android:layout_alignTop = "@id/btnDate"
+		android:id="@+id/btnMonth" />
+	<Button
+		android:text=""
+		android:layout_width="180px"
+		android:layout_height="wrap_content"
+		android:layout_toLeftOf = "@id/btnMonth"
+		android:layout_alignTop = "@id/btnMonth"
+		android:id="@+id/btnYear" />
+	<Button
+		android:text=""
+		android:layout_width="120px"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf = "@id/btnDate"
+		android:layout_alignTop = "@id/btnDate"
+		android:id="@+id/btnHour" />
+	<Button
+		android:text=""
+		android:layout_width="120px"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf = "@id/btnHour"
+		android:layout_alignTop = "@id/btnHour"
+		android:id="@+id/btnMinute" />
+	<Button
+		android:text="+"
+		android:layout_width="120px"
+		android:layout_height="wrap_content"
+		android:layout_above = "@id/btnMinute"
+		android:layout_alignLeft = "@id/btnMinute"
+		android:id="@+id/btnMinAdd" />
+	<Button
+		android:text="+"
+		android:layout_width="120px"
+		android:layout_height="wrap_content"
+		android:layout_above = "@id/btnMinute"
+		android:layout_alignLeft = "@id/btnHour"
+		android:id="@+id/btnHAdd" />
+	<Button
+		android:text="+"
+		android:layout_width="180px"
+		android:layout_height="wrap_content"
+		android:layout_above = "@id/btnMinute"
+		android:layout_alignLeft = "@id/btnYear"
+		android:id="@+id/btnYAdd" />
+	<Button
+		android:text="+"
+		android:layout_width="120px"
+		android:layout_height="wrap_content"
+		android:layout_above = "@id/btnMinute"
+		android:layout_alignLeft = "@id/btnMonth"
+		android:id="@+id/btnMAdd" />
+	<Button
+		android:text="+"
+		android:layout_width="120px"
+		android:layout_height="wrap_content"
+		android:layout_above = "@id/btnMinute"
+		android:layout_alignLeft = "@id/btnDate"
+		android:id="@+id/btnDAdd" />
+	<Button
+		android:text="—"
+		android:layout_width="120px"
+		android:layout_height="wrap_content"
+		android:layout_below = "@id/btnMinute"
+		android:layout_alignLeft = "@id/btnHour"
+		android:id="@+id/btnHCut" />
+	<Button
+		android:text="—"
+		android:layout_width="120px"
+		android:layout_height="wrap_content"
+		android:layout_below = "@id/btnMinute"
+		android:layout_alignLeft = "@id/btnMinute"
+		android:id="@+id/btnMinCut" />
+	<Button
+		android:text="—"
+		android:layout_width="120px"
+		android:layout_height="wrap_content"
+		android:layout_below = "@id/btnMinute"
+		android:layout_alignLeft = "@id/btnDate"
+		android:id="@+id/btnDCut" />
+	<Button
+		android:text="—"
+		android:layout_width="120px"
+		android:layout_height="wrap_content"
+		android:layout_below = "@id/btnMinute"
+		android:layout_alignLeft = "@id/btnMonth"
+		android:id="@+id/btnMCut" />
+	<Button
+		android:text="—"
+		android:layout_width="180px"
+		android:layout_height="wrap_content"
+		android:layout_below = "@id/btnMinute"
+		android:layout_alignLeft = "@id/btnYear"
+		android:id="@+id/btnYCut" />
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Theme.Custom" parent="Theme.Design.Light.NoActionBar"><item name="android:colorBackground">#fff1f8e9</item><item name="android:windowBackground">?android:attr/colorBackground</item><item name="android:colorPrimaryDark">#ffc5e1a5</item><item name="android:colorButtonNormal">#ffaed581</item><item name="android:colorControlActivated">#ff8bc34a</item><item name="android:colorControlNormal">#ffc5e1a5</item><item name="android:textColorPrimary">#fffafafa</item><item name="android:textColorSecondary">#fff5f5f5</item></style>
+	<style name="Theme.Custom1" parent="Theme.Design.Light.NoActionBar"><item name="android:colorBackground">#fff1f8e9</item><item name="android:windowBackground">?android:attr/colorBackground</item><item name="android:colorButtonNormal">#ffaed581</item><item name="android:colorControlActivated">#ff8bc34a</item><item name="android:colorControlNormal">#ffaed581</item><item name="android:colorPrimaryDark">#ffc5e1a5</item></style>
+</resources>
