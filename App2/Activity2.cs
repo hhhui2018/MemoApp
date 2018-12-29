@@ -31,13 +31,16 @@ namespace App2
             //编辑栏，输入备忘录
             editText1 = FindViewById<EditText>(Resource.Id.editText1);
             if(Activity1.txt != null)
+            {
                 stext = editText1.Text = Activity1.txt;
-            else
-                stext = editText1.Text = Activity3.txt;
+                Activity1.txt = null;
+            }
+     
             if (Activity3.txt != null)
+            {
                 stext = editText1.Text = Activity3.txt;
-            else
-                stext = editText1.Text = Activity1.txt;
+                Activity3.txt = null;
+            }
             //返回按钮，返回主界面
             ImageButton btnReturn = FindViewById<ImageButton>(Resource.Id.btnReturn);
             btnReturn.Click += delegate
