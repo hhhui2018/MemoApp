@@ -1,4 +1,4 @@
-﻿using Android.App;
+using Android.App;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Widget;
@@ -17,6 +17,7 @@ namespace App2
     public class Activity2 : Activity
     {
         public int id;
+        String stext;
         private SQLiteConnection sqliteConn;
         private const string TableName = "UserInfo";
         private string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "userinfo.db3");
@@ -30,13 +31,13 @@ namespace App2
             //编辑栏，输入备忘录
             editText1 = FindViewById<EditText>(Resource.Id.editText1);
             if(Activity1.txt != null)
-                editText1.Text = Activity1.txt;
+                stext = editText1.Text = Activity1.txt;
             else
-                editText1.Text = Activity3.txt;
+                stext = editText1.Text = Activity3.txt;
             if (Activity3.txt != null)
-                editText1.Text = Activity3.txt;
+                stext = editText1.Text = Activity3.txt;
             else
-                editText1.Text = Activity1.txt;
+                stext = editText1.Text = Activity1.txt;
             //返回按钮，返回主界面
             ImageButton btnReturn = FindViewById<ImageButton>(Resource.Id.btnReturn);
             btnReturn.Click += delegate
@@ -52,7 +53,7 @@ namespace App2
             {
 
                 sqliteConn = new SQLiteConnection(dbPath);
-                var text = FindViewById<EditText>(Resource.Id.editText1).Text;
+                var text = editText1.Text;
                 Register(text);
                 Intent intent = new Intent(this, typeof(Activity1));
                 this.StartActivity(intent);
@@ -77,7 +78,7 @@ namespace App2
             {
                 sqliteConn.CreateTable<UserInfo>();
             }
-            String a = "UPDATE UserInfo SET Text=" + "'" + text + "'" + " WHERE Text = " + "'" + Activity1.txt + "'";
+            String a = "UPDATE UserInfo SET Text=" + "'" + text + "'" + " WHERE Text = " + "'" + stext + "'";
             sqliteConn.Execute(a);
             Toast.MakeText(this, "成功", ToastLength.Short).Show();
             sqliteConn.Close();
